@@ -16,7 +16,7 @@ class MySyncConsumer(SyncConsumer):
         # Called when data is received from the client
         print("Message received...", event)
         print("Messaged is:", event['text'])
-        for i in range(50):
+        for i in range(10):
             self.send({
             'type': 'websocket.send',
             'text': str(i)
